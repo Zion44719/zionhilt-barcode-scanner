@@ -187,7 +187,11 @@ Edit the CSS variables in `styles.css`:
 | Mobile Chrome   | ✅              | ✅ (rear camera)|
 
 ---
+## Donation
+Bitcoin Wallet ID:
+3B7Mr21GZvWst8sV1tmTRBSngvuHCfY2eS
 
+---
 ## 📄 License
 
 © 2024 Zionhilt Store. All rights reserved.

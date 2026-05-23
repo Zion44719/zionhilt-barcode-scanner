@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zionhilt Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxing-js/0.20.0/zxing.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ================================================
+         AUTH SCREENS  (login / register / forgot-password)
+         ================================================ -->
+
+    <!-- LOGIN -->
+    <div id="login-screen" class="auth-screen active">
+      <div class="auth-card">
+        <div class="store-logo">
+          <svg width="170" height="34" viewBox="0 0 230 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.1797 25.2324C20.916 27.4883 20.0811 29.2314 18.6748 30.4619C17.2783 31.6826 15.418 32.293 13.0938 32.293C10.5742 32.293 8.55273 31.3896 7.0293 29.583C5.51562 27.7764 4.75879 25.3594 4.75879 22.332V20.2812C4.75879 18.2988 5.11035 16.5557 5.81348 15.0518C6.52637 13.5479 7.53223 12.3955 8.83105 11.5947C10.1299 10.7842 11.6338 10.3789 13.3428 10.3789C15.6084 10.3789 17.4248 11.0137 18.792 12.2832C20.1592 13.543 20.9551 15.291 21.1797 17.5273H18.3525C18.1084 15.8281 17.5762 14.5977 16.7559 13.8359C15.9453 13.0742 14.8076 12.6934 13.3428 12.6934C11.5459 12.6934 10.1348 13.3574 9.10938 14.6855C8.09375 16.0137 7.58594 17.9033 7.58594 20.3545V22.4199C7.58594 24.7344 8.06934 26.5752 9.03613 27.9424C10.0029 29.3096 11.3555 29.9932 13.0938 29.9932C14.6562 29.9932 15.8525 29.6416 16.6826 28.9385C17.5225 28.2256 18.0791 26.9902 18.3525 25.2324H21.1797ZM26.8896 23.9287C26.8896 22.376 27.1924 20.9795 27.7979 19.7393C28.4131 18.499 29.2627 17.542 30.3467 16.8682C31.4404 16.1943 32.6855 15.8574 34.082 15.8574C36.2402 15.8574 37.9834 16.6045 39.3115 18.0986C40.6494 19.5928 41.3184 21.5801 41.3184 24.0605V24.251C41.3184 25.7939 41.0205 27.1807 40.4248 28.4111C39.8389 29.6318 38.9941 30.584 37.8906 31.2676C36.7969 31.9512 35.5371 32.293 34.1113 32.293C31.9629 32.293 30.2197 31.5459 28.8818 30.0518C27.5537 28.5576 26.8896 26.5801 26.8896 24.1191V23.9287ZM29.6143 24.251C29.6143 26.0088 30.0195 27.4199 30.8301 28.4844C31.6504 29.5488 32.7441 30.0811 34.1113 30.0811C35.4883 30.0811 36.582 29.5439 37.3926 28.4697C38.2031 27.3857 38.6084 25.8721 38.6084 23.9287C38.6084 22.1904 38.1934 20.7842 37.3633 19.71C36.543 18.626 35.4492 18.084 34.082 18.084C32.7441 18.084 31.665 18.6162 30.8447 19.6807C30.0244 20.7451 29.6143 22.2686 29.6143 24.251ZM47.0576 23.9434C47.0576 21.5117 47.6338 19.5586 48.7861 18.084C49.9385 16.5996 51.4473 15.8574 53.3125 15.8574C55.168 15.8574 56.6377 16.4922 57.7217 17.7617V9.5H60.4316V32H57.9414L57.8096 30.3008C56.7256 31.6289 55.2168 32.293 53.2832 32.293C51.4473 32.293 49.9482 31.541 48.7861 30.0371C47.6338 28.5332 47.0576 26.5703 47.0576 24.1484V23.9434ZM49.7676 24.251C49.7676 26.0479 50.1387 27.4541 50.8809 28.4697C51.623 29.4854 52.6484 29.9932 53.957 29.9932C55.6758 29.9932 56.9307 29.2217 57.7217 27.6787V20.3984C56.9111 18.9043 55.666 18.1572 53.9863 18.1572C52.6582 18.1572 51.623 18.6699 50.8809 19.6953C50.1387 20.7207 49.7676 22.2393 49.7676 24.251ZM70.5947 32H67.8848V16.1504H70.5947V32ZM67.665 11.9463C67.665 11.5068 67.7969 11.1357 68.0605 10.833C68.334 10.5303 68.7344 10.3789 69.2617 10.3789C69.7891 10.3789 70.1895 10.5303 70.4629 10.833C70.7363 11.1357 70.873 11.5068 70.873 11.9463C70.873 12.3857 70.7363 12.752 70.4629 13.0449C70.1895 13.3379 69.7891 13.4844 69.2617 13.4844C68.7344 13.4844 68.334 13.3379 68.0605 13.0449C67.7969 12.752 67.665 12.3857 67.665 11.9463ZM80.5088 16.1504L80.5967 18.1426C81.8076 16.6191 83.3896 15.8574 85.3428 15.8574C88.6924 15.8574 90.3818 17.7471 90.4111 21.5264V32H87.7012V21.5117C87.6914 20.3691 87.4277 19.5244 86.9102 18.9775C86.4023 18.4307 85.6064 18.1572 84.5225 18.1572C83.6436 18.1572 82.8721 18.3916 82.208 18.8604C81.5439 19.3291 81.0264 19.9443 80.6553 20.7061V32H77.9453V16.1504H80.5088Z" fill="#222222"/>
+            <path d="M139.987 26.4336H131.052L129.045 32H126.145L134.289 10.6719H136.75L144.909 32H142.023L139.987 26.4336ZM131.901 24.1191H139.152L135.52 14.1436L131.901 24.1191ZM149.696 23.9434C149.696 21.5117 150.272 19.5586 151.425 18.084C152.577 16.5996 154.086 15.8574 155.951 15.8574C157.807 15.8574 159.276 16.4922 160.36 17.7617V9.5H163.07V32H160.58L160.448 30.3008C159.364 31.6289 157.855 32.293 155.922 32.293C154.086 32.293 152.587 31.541 151.425 30.0371C150.272 28.5332 149.696 26.5703 149.696 24.1484V23.9434ZM152.406 24.251C152.406 26.0479 152.777 27.4541 153.52 28.4697C154.262 29.4854 155.287 29.9932 156.596 29.9932C158.314 29.9932 159.569 29.2217 160.36 27.6787V20.3984C159.55 18.9043 158.305 18.1572 156.625 18.1572C155.297 18.1572 154.262 18.6699 153.52 19.6953C152.777 20.7207 152.406 22.2393 152.406 24.251ZM193.167 32H190.457V16.1504H193.167V32ZM190.237 11.9463C190.237 11.5068 190.369 11.1357 190.633 10.833C190.906 10.5303 191.307 10.3789 191.834 10.3789C192.361 10.3789 192.762 10.5303 193.035 10.833C193.309 11.1357 193.445 11.5068 193.445 11.9463C193.445 12.3857 193.309 12.752 193.035 13.0449C192.762 13.3379 192.361 13.4844 191.834 13.4844C191.307 13.4844 190.906 13.3379 190.633 13.0449C190.369 12.752 190.237 12.3857 190.237 11.9463ZM206.875 30.0811C207.842 30.0811 208.687 29.7881 209.409 29.2021C210.132 28.6162 210.532 27.8838 210.61 27.0049H213.174C213.125 27.9131 212.812 28.7773 212.236 29.5977C211.66 30.418 210.889 31.0723 209.922 31.5605C208.965 32.0488 207.949 32.293 206.875 32.293C204.717 32.293 202.998 31.5752 201.719 30.1396C200.449 28.6943 199.814 26.7217 199.814 24.2217V23.7676C199.814 22.2246 200.098 20.8525 200.664 19.6514C201.23 18.4502 202.041 17.5176 203.096 16.8535C204.16 16.1895 205.415 15.8574 206.86 15.8574C208.638 15.8574 210.112 16.3896 211.284 17.4541C212.466 18.5186 213.096 19.9004 213.174 21.5996H210.61C210.532 20.5742 210.142 19.7344 209.438 19.0801C208.745 18.416 207.886 18.084 206.86 18.084C205.483 18.084 204.414 18.582 203.652 19.5781C202.9 20.5645 202.524 21.9951 202.524 23.8701V24.3828C202.524 26.209 202.9 27.6152 203.652 28.6016C204.404 29.5879 205.479 30.0811 206.875 30.0811ZM222.897 12.3125V16.1504H225.856V18.2451H222.897V28.0742C222.897 28.709 223.029 29.1875 223.293 29.5098C223.557 29.8223 224.006 29.9785 224.641 29.9785C224.953 29.9785 225.383 29.9199 225.93 29.8027V32C225.217 32.1953 224.523 32.293 223.85 32.293C222.639 32.293 221.726 31.9268 221.11 31.1943C220.495 30.4619 220.188 29.4219 220.188 28.0742V18.2451H217.302V16.1504H220.188V12.3125H222.897Z" fill="#49A6E9"/>
+          </svg>
+        </div>
+        <h2>Cashier Sign In</h2>
+
+        <div class="auth-field">
+          <label for="login-username"><i class="fas fa-user"></i> Username</label>
+          <input type="text" id="login-username" placeholder="Enter your username" autocomplete="off" />
+        </div>
+        <div class="auth-field">
+          <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="login-password" placeholder="Enter your password" />
+            <button type="button" class="pw-toggle" onclick="togglePw('login-password',this)"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="auth-links-row">
+          <label class="remember-me">
+            <input type="checkbox" id="remember-me" /> Remember me
+          </label>
+          <button type="button" class="text-link" onclick="showScreen('forgot-screen')">Forgot password?</button>
+        </div>
+
+        <button class="auth-btn" onclick="handleLogin()">
+          Sign In &nbsp;<i class="fas fa-sign-in-alt"></i>
+        </button>
+        <div class="auth-error" id="login-error"></div>
+
+        <p class="auth-switch">
+          Don't have an account?
+          <button type="button" class="text-link" onclick="showScreen('register-screen')">Create account</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="register-screen" class="auth-screen">
+      <div class="auth-card">
+        <div class="store-logo">
+          <p class="auth-brand">ZIONHILT STORE</p>
+        </div>
+        <h2>Create Account</h2>
+
+        <div class="auth-field">
+          <label for="reg-fullname"><i class="fas fa-id-card"></i> Full Name</label>
+          <input type="text" id="reg-fullname" placeholder="e.g. Tunde Adeyemi" />
+        </div>
+        <div class="auth-field">
+          <label for="reg-username"><i class="fas fa-user"></i> Username</label>
+          <input type="text" id="reg-username" placeholder="Choose a username" autocomplete="off" />
+        </div>
+        <div class="auth-field">
+          <label for="reg-email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="reg-email" placeholder="yourname@email.com" />
+        </div>
+        <div class="auth-field">
+          <label for="reg-password"><i class="fas fa-lock"></i> Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="reg-password" placeholder="Min. 6 characters" />
+            <button type="button" class="pw-toggle" onclick="togglePw('reg-password',this)"><i class="fas fa-eye"></i></button>
+          </div>
+          <div class="pw-strength" id="pw-strength-bar"><div id="pw-strength-fill"></div></div>
+          <span class="pw-strength-label" id="pw-strength-label"></span>
+        </div>
+        <div class="auth-field">
+          <label for="reg-confirm"><i class="fas fa-lock"></i> Confirm Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="reg-confirm" placeholder="Repeat password" />
+            <button type="button" class="pw-toggle" onclick="togglePw('reg-confirm',this)"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="reg-role"><i class="fas fa-user-tag"></i> Role</label>
+          <select id="reg-role" class="auth-select">
+            <option value="cashier">Cashier</option>
+            <option value="supervisor">Supervisor</option>
+          </select>
+        </div>
+
+        <button class="auth-btn" onclick="handleRegister()">
+          Create Account &nbsp;<i class="fas fa-user-plus"></i>
+        </button>
+        <div class="auth-error" id="register-error"></div>
+        <div class="auth-success" id="register-success"></div>
+
+        <p class="auth-switch">
+          Already have an account?
+          <button type="button" class="text-link" onclick="showScreen('login-screen')">Sign in</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- FORGOT PASSWORD -->
+    <div id="forgot-screen" class="auth-screen">
+      <div class="auth-card">
+        <div class="store-logo">
+          <p class="auth-brand">ZIONHILT STORE</p>
+        </div>
+        <h2>Reset Password</h2>
+        <p class="auth-desc">Enter the email linked to your account and we'll generate a reset token.</p>
+
+        <!-- Step 1: enter email -->
+        <div id="forgot-step1">
+          <div class="auth-field">
+            <label for="forgot-email"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="forgot-email" placeholder="yourname@email.com" />
+          </div>
+          <button class="auth-btn" onclick="handleForgotStep1()">
+            Send Reset Token &nbsp;<i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="auth-error"  id="forgot-error1"></div>
+          <div class="auth-success" id="forgot-success1"></div>
+        </div>
+
+        <!-- Step 2: enter token + new password -->
+        <div id="forgot-step2" style="display:none">
+          <div class="token-display" id="token-display"></div>
+          <div class="auth-field">
+            <label for="forgot-token"><i class="fas fa-key"></i> Reset Token</label>
+            <input type="text" id="forgot-token" placeholder="Paste token from above" />
+          </div>
+          <div class="auth-field">
+            <label for="forgot-newpw"><i class="fas fa-lock"></i> New Password</label>
+            <div class="pw-wrap">
+              <input type="password" id="forgot-newpw" placeholder="Min. 6 characters" />
+              <button type="button" class="pw-toggle" onclick="togglePw('forgot-newpw',this)"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label for="forgot-confirmpw"><i class="fas fa-lock"></i> Confirm New Password</label>
+            <div class="pw-wrap">
+              <input type="password" id="forgot-confirmpw" placeholder="Repeat new password" />
+              <button type="button" class="pw-toggle" onclick="togglePw('forgot-confirmpw',this)"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <button class="auth-btn" onclick="handleForgotStep2()">
+            Reset Password &nbsp;<i class="fas fa-check-circle"></i>
+          </button>
+          <div class="auth-error"  id="forgot-error2"></div>
+          <div class="auth-success" id="forgot-success2"></div>
+        </div>
+
+        <p class="auth-switch" style="margin-top:1rem">
+          <button type="button" class="text-link" onclick="showScreen('login-screen')">
+            <i class="fas fa-arrow-left"></i> Back to Sign In
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <!-- ================================================
+         DASHBOARD
+         ================================================ -->
+    <div id="dashboard" style="display:none">
+
+      <!-- Top bar -->
+      <div class="top-bar">
+        <div class="cashier-info">
+          <i class="fas fa-user-circle"></i>
+          <div>
+            <div class="cashier-name" id="cashier-display">—</div>
+            <div class="cashier-role" id="cashier-role-display">Cashier</div>
+          </div>
+        </div>
+        <div class="top-date" id="top-date"></div>
+        <button class="logout-btn" onclick="handleLogout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+
+      <!-- Receipt card -->
+      <div class="section-center">
+        <form class="grocery-form">
+          <p class="alert"></p>
+          <h3>Zionhilt Store Receipt</h3>
+          <div class="address">
+            <p>Dealer in all kinds of Office Stationery and Computer Accessories</p>
+            <p>Ado-Ekiti, Ekiti State, Nigeria</p>
+          </div>
+
+          <div class="receipt-header">
+            <div><b>Receipt No:</b> <span id="receipt">—</span></div>
+            <div><b>Date:</b> <span id="date-full">—</span></div>
+            <div class="cashier-badge">
+              <i class="fas fa-id-badge"></i> Cashier: <span id="receipt-cashier">—</span>
+            </div>
+          </div>
+
+          <!-- Form inputs -->
+          <div class="form-control" id="form-control">
+            <div>
+              <label for="grocery">Product</label>
+              <select class="grocery" id="grocery">
+                <option value="">Choose...</option>
+                <option value="Hp Laptop">Hp Laptop</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Keyboard">Keyboard</option>
+                <option value="Flashdrive 32gb">Flashdrive 32gb</option>
+                <option value="Flashdrive 16gb">Flashdrive 16gb</option>
+                <option value="Dell Laptop">Dell Laptop</option>
+                <option value="Screen Cover">Screen Cover</option>
+                <option value="Card Reader">Card Reader</option>
+                <option value="Hp Charger">Hp Charger</option>
+                <option value="Samsung Charger">Samsung Charger</option>
+                <option value="Asus Charger">Asus Charger</option>
+                <option value="Lenovo Charger">Lenovo Charger</option>
+                <option value="Apple Charger">Apple Charger</option>
+                <option value="Dell Charger">Dell Charger</option>
+              </select>
+            </div>
+            <div>
+              <label for="qty">Quantity</label>
+              <input type="number" class="grocery" id="qty" value="" min="1" style="width:80px" />
+            </div>
+            <div>
+              <label for="amt">Amount (₦)</label>
+              <input type="number" class="grocery" id="amt" value="" min="0" style="width:110px" />
+            </div>
+            <div style="align-self:flex-end">
+              <input type="submit" class="submit-btn" value="Add" />
+            </div>
+            <div style="align-self:flex-end">
+              <button type="button" class="scan-btn" onclick="openScanner()">
+                <i class="fas fa-barcode"></i> Scan
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- SCANNER MODAL -->
+        <div id="scanner-modal">
+          <div class="scanner-box">
+            <button class="scanner-close" onclick="closeScanner()">&times;</button>
+            <h4><i class="fas fa-barcode"></i>&nbsp; Barcode Scanner</h4>
+            <div id="scanner-video-wrap">
+              <video id="scanner-video" playsinline muted autoplay></video>
+              <div class="scanner-laser"></div>
+              <div class="scan-corner tl"></div>
+              <div class="scan-corner tr"></div>
+              <div class="scan-corner bl"></div>
+              <div class="scan-corner br"></div>
+            </div>
+            <div class="scanner-status" id="scanner-status">Initializing camera…</div>
+            <div class="scanner-manual">
+              <input type="text" id="manual-barcode" placeholder="Or type barcode / product code…" />
+              <button onclick="applyManualBarcode()">Use</button>
+            </div>
+            <p class="scanner-hint">Supports EAN-13, EAN-8, UPC-A, QR Code, Code-128 and more.</p>
+          </div>
+        </div>
+
+        <!-- List -->
+        <div class="grocery-container">
+          <table>
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Price (₦)</th>
+                <th>Total (₦)</th>
+                <th id="form-control">Edit</th>
+                <th id="form-control">Del</th>
+              </tr>
+            </thead>
+            <tbody class="grocery-list"></tbody>
+          </table>
+
+          <div class="grand-total-row">
+            <span>Grand Total</span>
+            <span>₦ <span class="amtt">0</span></span>
+          </div>
+
+          <!-- Barcode on receipt -->
+          <div class="barcode-section" id="barcode-section">
+            <div class="barcode-container">
+              <canvas id="barcode-canvas" width="220" height="60"></canvas>
+              <div class="barcode-text" id="barcode-text"></div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="clear-btn" id="form-control">
+              <i class="fas fa-trash-alt"></i> Clear Items
+            </button>
+            <button type="button" class="print-btn" id="form-control" onclick="window.print()">
+              <i class="fas fa-print"></i> Print Receipt
+            </button>
+          </div>
+        </div>
+
+        <div class="receipt-footer"><p><i>Confirm your goods before leaving our premises, Goods taken in good condition are not returnable.</i></p></div>
+        <div class="receipt-footer"><p><i>Thanks for your patronage!</i></p></div>
+        <footer class="receipt-foot"><p>&copy; Zionhilt | 2024. All Rights Reserved</p></footer>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
